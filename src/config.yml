@@ -1,0 +1,79 @@
+# TrenchTools ~ Developed by Chazmondo #
+
+# Plugin information can be found over at
+# https://pluginwiki.io/TrenchTools
+
+# Define each tool under
+# tool:
+#  Army:
+#      item:
+#        name: "&6&lMy Army Tool" # Item display name
+#        lore:
+#        - "&7A lore on the item!" # You may also set a lore
+#        item: DIAMOND_PICKAXE # Choose from any tool (You can even use items!)
+#      setting:
+#        radius: 5 # Choose a radius, this is r x r.
+#        permission: false # when true, trenchtools.use.<id>
+#        chance: 50 # Out of 100 - E.g, 50 / 100 = 50% chance
+#        item-drop: true # Whether an item will drop or not
+#
+
+tool:
+  Army:
+      item:
+        name: "&2&lARMY &aTrench Tool"
+        lore:
+        - "&8» &7GO.. GO.. GO.."
+        item: DIAMOND_PICKAXE
+      setting:
+        radius: 3
+        permission: false
+        chance: 50
+        item-drop: false
+        sound: BLOCK_NOTE_PLING # Set to '' to disable
+        sound-per-block: true # When true, will make sound for each block in radius
+  Reinforced:
+      item:
+        name: "&cReinforced Shovel"
+        lore:
+        - "&8» &7Specialised Shovel.."
+        - "&8» &eGolden Power"
+        item: DIAMOND_SPADE
+      setting:
+        radius: 3
+        permission: true
+        chance: 20
+        item-drop: true
+        sound: '' # Set to '' to disable
+        sound-per-block: true # When true, will make sound for each block in radius
+
+# Blacklist Area #
+# Note: region requires WorldGuard to be installed!
+blacklist:
+  item:
+  - BEDROCK
+  - LEAVES
+  - STAINED_CLAY;5
+
+  world:
+  - world
+
+  region:
+  - demo
+
+
+message:
+  reloaded: "&6[&eTrenchTools&6] &7Configuration Reloaded."
+  given: "&6[&eTrenchTools&6] &7Given &f%player% &7%amount%x &e%tier% &7Trench Tool."
+  received: "&6[&eTrenchTools&6] &7You received &7%amount%x &e%tier% &7Trench Tool."
+  invalid: "&6[&eTrenchTools&6] &7That is an invalid Trench Tool."
+  given-all: "&6[&eTrenchTools&6] &7You have given &a%amount% &7online players a &e%tier% &7Trench Tool."
+  activated: "&6[&eTrenchTools&6] &7Trench Tool Activated!"
+  blacklisted: "&6[&eTrenchTools&6] &7Your &eTrench Tool &7is in a blocked world, it will NOT function!"
+  list:
+    format: "&e%tier%&7, "
+    format-end: "&e%tier%"
+    message: "&6[&eTrenchTools&6] &7Trench Tools: %list%"
+  permission:
+    command: "&6[&eTrenchTools&6] &7You do not have permission to use that command."
+    trenchtool: "&6[&eTrenchTools&6] &7You need &etrenchtools.use.%tier% &7to use that!"

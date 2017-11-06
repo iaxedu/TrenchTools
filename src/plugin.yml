@@ -1,0 +1,5 @@
+name: TrenchTools
+version: 1.0.6
+main: io.chazza.trenchtools.TrenchTools
+description: #1 Faction Pick Plugin! Allow players to create trenches!
+softdepend: [WorldGuard, FactionsUUID]
